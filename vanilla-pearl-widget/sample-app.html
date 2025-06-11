@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Vanilla Pearl Widget Sample App</title>
+        <script src="./dist/pearl-widget.global.js"></script>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            }
+            #pearl-container {
+                border: 1px solid #ccc;
+                background-color: #fff;
+                padding: 10px;
+                height: 600px
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Vanilla Pearl Widget Sample App</h1>
+        <p>This is a sample application demonstrating the Pearl Widget.</p>
+        <div id="pearl-container" style="width: 800px; height: 600px;"></div>
+
+        <script>
+            pearlWidget.insertPearlWidget('#pearl-container', {
+                accessKey: 'YOUR_PEARL_API_KEY',
+                mode: 'pearl-ai'
+        });
+        </script>
+    </body>
+</html>

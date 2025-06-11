@@ -1,0 +1,37 @@
+{
+  "name": "pearl-vanilla-widget",
+  "version": "0.0.1",
+  "description": "A lightweight vanilla JS function to embed the Pearl Widget iframe into any webpage or app.",
+  "main": "dist/pearl-widget.cjs",
+  "module": "dist/pearl-widget.js",
+  "types": "dist/pearl-widget.d.ts",
+  "unpkg": "dist/pearl-widget.iife.js",
+  "jsdelivr": "dist/pearl-widget.iife.js",
+  "exports": {
+    ".": {
+      "require": "./dist/pearl-widget.cjs",
+      "import": "./dist/pearl-widget.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/pearl-widget.ts --format esm,cjs,iife --global-name pearlWidget  --dts --minify --out-dir dist",
+    "dev": "tsup src/pearl-widget.ts --format esm,cjs,iife --global-name pearlWidget  --watch --out-dir dist"
+  },
+  "keywords": [
+    "iframe",
+    "widget",
+    "pearl",
+    "injector",
+    "postMessage",
+    "vanilla-js",
+    "embed"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.0.0"
+  }
+}

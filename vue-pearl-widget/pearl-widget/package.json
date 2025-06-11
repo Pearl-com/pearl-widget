@@ -1,0 +1,40 @@
+{
+  "name": "pearl-vue-widget",
+  "version": "0.0.1",
+  "description": "Vue component for Pearl Widget",
+  "main": "./dist/pearl-vue-widget.umd.js",
+  "module": "./dist/pearl-vue-widget.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/pearl-vue-widget.mjs",
+      "require": "./dist/pearl-vue-widget.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --outDir dist",
+    "dev": "vite"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "typescript": "^5.3.0",
+    "vite": "^5.1.0",
+    "vue": "^3.3.0",
+    "vue-tsc": "^2.0.0"
+  },
+  "keywords": [
+    "pearl",
+    "widget",
+    "vue"
+  ],
+  "author": "Pearl AI",
+  "license": "MIT"
+}

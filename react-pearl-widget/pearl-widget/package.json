@@ -1,0 +1,23 @@
+{
+  "name": "pearl-react-widget",
+  "version": "0.0.1",
+  "description": "Represents simple react ready to use Pearl API widget",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.4",
+    "@types/react-dom": "18.3.0",
+    "tsup": "^8.5.0"
+  }
+}
