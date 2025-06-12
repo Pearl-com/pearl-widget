@@ -24,6 +24,8 @@ Each implementation provides a reusable widget component and a sample applicatio
 
 ## Quick Embed: Add Pearl AI to Any Website
 
+### Basic Embed (AI-only mode)
+
 You can add Pearl AI to your website by simply copying and pasting the following HTML snippet:
 
 ```html
@@ -35,9 +37,89 @@ You can add Pearl AI to your website by simply copying and pasting the following
 ></iframe>
 ```
 
-Paste this code wherever you want the Pearl Widget to appear. No JavaScript is required for the basic embed.
+### Advanced Embed (AI + Expert mode with Access Key)
 
-For advanced configuration (access keys, modes, etc.), see the [Vanilla JS Widget instructions](./vanilla-pearl-widget/README.md).
+For full AI + Expert functionality, add this single script tag anywhere in your HTML:
+
+```html
+<script>
+(function() {
+    // Configuration - Replace with your actual values
+    const PEARL_ACCESS_KEY = 'YOUR_ACCESS_KEY';
+    const PEARL_MODE = 'pearl-ai-expert'; // Options: 'expert', 'pearl-ai', 'pearl-ai-verified', 'pearl-ai-expert'
+    const CONTAINER_ID = 'pearl-widget-container'; // ID of the div where widget should appear
+    
+    // Create container if it doesn't exist
+    let container = document.getElementById(CONTAINER_ID);
+    if (!container) {
+        container = document.createElement('div');
+        container.id = CONTAINER_ID;
+        container.style.cssText = 'width: 100%; height: 600px; border: 1px solid #ddd;';
+        document.body.appendChild(container);
+    }
+    
+    // Create and configure iframe
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://www.pearl.com/api/widget';
+    iframe.title = 'Pearl Widget';
+    iframe.style.cssText = 'width: 100%; height: 100%; border: none;';
+    iframe.allow = 'clipboard-write';
+    
+    // Handle iframe load and send configuration
+    iframe.onload = function() {
+        iframe.contentWindow.postMessage({
+            type: 'init',
+            payload: {
+                accessKey: PEARL_ACCESS_KEY,
+                mode: PEARL_MODE
+            }
+        }, 'https://www.pearl.com');
+    };
+    
+    // Append iframe to container
+    container.appendChild(iframe);
+})();
+</script>
+```
+
+**Alternative:** If you have a specific container div, just add it to your HTML and update the `CONTAINER_ID`:
+
+```html
+<div id="my-pearl-chat" style="width: 800px; height: 600px;"></div>
+<script>
+(function() {
+    const PEARL_ACCESS_KEY = 'YOUR_ACCESS_KEY';
+    const PEARL_MODE = 'pearl-ai-expert';
+    const CONTAINER_ID = 'my-pearl-chat'; // Your container ID
+    
+    const container = document.getElementById(CONTAINER_ID);
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://www.pearl.com/api/widget';
+    iframe.title = 'Pearl Widget';
+    iframe.style.cssText = 'width: 100%; height: 100%; border: none;';
+    iframe.allow = 'clipboard-write';
+    
+    iframe.onload = function() {
+        iframe.contentWindow.postMessage({
+            type: 'init',
+            payload: { accessKey: PEARL_ACCESS_KEY, mode: PEARL_MODE }
+        }, 'https://www.pearl.com');
+    };
+    
+    container.appendChild(iframe);
+})();
+</script>
+```
+
+**To get your access key:** Visit [Pearl Contact Page](https://www.pearl.com/contact) to request API access.
+
+**Available modes:**
+- `expert`: Direct human expert assistance
+- `pearl-ai`: AI-only responses  
+- `pearl-ai-verified`: AI responses verified by experts
+- `pearl-ai-expert`: Full AI + Expert escalation capability
+
+For framework-specific implementations, see the [Vanilla JS Widget instructions](./vanilla-pearl-widget/README.md).
 
 ---
 
