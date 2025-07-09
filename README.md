@@ -7,7 +7,9 @@ Pearl API empowers your applications and websites with advanced AI capabilities�
 - Offer users a blended experience: AI for speed and scale, human experts for accuracy, nuance, and peace of mind.
 - Leverage secure, scalable infrastructure and easy integration for any web platform.
 
-Pearl’s hybrid approach ensures your users always get the best answer—whether from state-of-the-art AI or a verified human expert.
+Pearl's hybrid approach ensures your users always get the best answer—whether from state-of-the-art AI or a verified human expert.
+
+![See Pearl Widget in Action](./assets/see_it_in_action.png)
 
 ---
 
@@ -21,6 +23,20 @@ This repository contains public Pearl API Widget components and usage samples fo
 - **Vanilla JS**
 
 Each implementation provides a reusable widget component and a sample application demonstrating its usage.
+
+## Conversation Experience
+
+See how Pearl Widget creates engaging conversations that can seamlessly transition from AI assistance to human expert support:
+
+![Conversation Example](./assets/conversation_example.png)
+
+## System Architecture
+
+Pearl Widget is built on a hybrid architecture that combines the speed of AI with the accuracy of human expertise:
+
+![System Design](./assets/system_design.png)
+
+The system seamlessly routes conversations between AI and human experts based on complexity, user preference, and confidence levels, ensuring users always receive the most appropriate and accurate assistance.
 
 ## Quick Embed: Add Pearl AI to Any Website
 
