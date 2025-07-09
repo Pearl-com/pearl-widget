@@ -7,9 +7,11 @@ Pearl API empowers your applications and websites with advanced AI capabilities�
 - Offer users a blended experience: AI for speed and scale, human experts for accuracy, nuance, and peace of mind.
 - Leverage secure, scalable infrastructure and easy integration for any web platform.
 
-Pearl's hybrid approach ensures your users always get the best answer—whether from state-of-the-art AI or a verified human expert.
+Pearl's hybrid approach ensures your users always get the best answer - whether from state-of-the-art AI or a verified human expert.
 
 ![See Pearl Widget in Action](./assets/see_it_in_action.png)
+
+**[Try the Live Demo →](https://www.pearl.com)**
 
 ---
 
