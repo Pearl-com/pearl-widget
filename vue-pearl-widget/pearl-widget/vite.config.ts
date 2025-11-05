@@ -8,7 +8,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'PearlVueWidget',
-      fileName: (format) => `pearl-vue-widget.${format}.js`,
+  fileName: (format) => `pearl-widget-vue.${format}.js`,
       formats: ['es', 'umd', 'cjs']
     },
     rollupOptions: {

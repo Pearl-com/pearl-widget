@@ -1,29 +1,29 @@
-# pearl-widget
+# @pearl.com/pearl-widget-angular
 
 An Angular component that embeds the **Pearl Widget** iframe into your application. It allows initialization of the widget with an access key and mode, enabling interactive chat or expert systems powered by Pearl.
 
 ## ✨ Features
 
 - Embeds a secure iframe widget from Pearl
-- Configurable via `apiKey` and `mode`
+- Configurable via `accessKey` and `mode`
 - Automatically initializes via `postMessage` on iframe load
 - Simple Angular integration
 
-By default chat starts in pearl-ai mode. To enable other mods you need to obtain `apiKey` [here](https://www.pearl.com/contact).
+By default chat starts in pearl-ai mode. To enable other mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
 
 ## 📦 Installation
 
 Install the widget package via npm:
 
 ```bash
-npm install pearl-angular-widget
+npm install @pearl.com/pearl-widget-angular
 ```
 
 ## 🚀 Usage
 
 ```html
 <pearl-widget
-  [apiKey]="'your-access-key'"
+  [accessKey]="'your-access-key'"
   [mode]="'pearl-ai'"
 ></pearl-widget>
 ```
@@ -32,8 +32,8 @@ npm install pearl-angular-widget
 
 | Input       | Type     | Description                                                                                         |
 | ----------- | -------- | --------------------------------------------------------------------------------------------------- |
-| `apiKey` | `string` | Optional. The key used to authenticate the widget session.                                      |
-| `mode`      | `string` | Optional. Used only with **apiKey**. One of the available modes: `expert`, `pearl-ai`, `pearl-ai-verified`, `pearl-ai-expert`. |
+| `accessKey` | `string` | Optional. The key used to authenticate the widget session.                                      |
+| `mode`      | `string` | Optional. Used only with **accessKey**. One of the available modes: `expert`, `pearl-ai`, `pearl-ai-verified`, `pearl-ai-expert`. |
 
 ## 🧪 Development
 

@@ -1,6 +1,6 @@
 # Pearl Angular Widget - Sample App
 
-Sample Angular application demonstrating usage of [`pearl-angular-widget`](../../pearl-widget).
+Sample Angular application demonstrating usage of [`@pearl.com/pearl-widget-angular`](../../pearl-widget).
 
 ## Project Setup
 

@@ -2,7 +2,9 @@
 import { ref } from 'vue';
 // Assuming your local package is correctly linked or installed
 // and its exports are set up as in the previous step.
-import { PearlWidget } from '../../pearl-widget/src';//'pearl-vue-widget'; 
+// For development linking you can keep the relative path; when consuming the published package use:
+// import { PearlWidget } from '@pearl.com/pearl-widget-vue';
+import { PearlWidget } from '@pearl.com/pearl-widget-vue';
 
 const accessKey = ref();
 const mode = ref('pearl-ai');

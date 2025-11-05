@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PearlWidget } from 'ngx-pearl-widget';
+import { PearlWidget } from '@pearl.com/pearl-widget-angular';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
     <h1>Pearl Chat Widget Example</h1>
     <div class="widget">
       <pearl-widget
-        [apiKey]="'YOUR_PEARL_API_KEY'"
-        [mode]="'expert'"
+        [accessKey]="'YOUR_PEARL_ACCESS_KEY'"
+        [mode]="'pearl-ai'"
       ></pearl-widget>
     </div>
   `,

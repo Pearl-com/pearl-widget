@@ -14,8 +14,7 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      // Ensure this matches how you import your local package
-      "pearl-vue-widget": ["../pearl-widget/src/index.ts"] 
+      "@pearl.com/pearl-widget-vue": ["../pearl-widget/src/index.ts"] 
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "vite.config.ts"]

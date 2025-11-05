@@ -1,6 +1,6 @@
 # Pearl React Widget - Sample App
 
-Sample React application demonstrating usage of [`pearl-react-widget`](../../pearl-widget).
+Sample React application demonstrating usage of [`@pearl.com/pearl-widget-react`](../../pearl-widget).
 
 ## Project Setup
 

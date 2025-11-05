@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 
 export interface PearlWidgetProps {
-    apiKey?: string;
+    accessKey?: string;
     mode?: string; // Use one the available mods: expert, pearl-ai, pearl-ai-verified, pearl-ai-expert
 }
 
@@ -11,11 +11,11 @@ export const PearlWidget = (props: PearlWidgetProps) => {
 
   //Inits chat when iframe loads
   const handleLoad = () => {
-    if (iframeRef.current && props?.apiKey && props?.mode) {
+    if (iframeRef.current && props?.accessKey && props?.mode) {
       iframeRef.current?.contentWindow?.postMessage(
          {
             type: 'init',
-            payload: {accessKey: props.apiKey, mode: props.mode}
+            payload: {accessKey: props.accessKey, mode: props.mode}
         },
         widgetOrigin
       );

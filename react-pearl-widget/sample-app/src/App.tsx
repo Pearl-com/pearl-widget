@@ -1,5 +1,5 @@
 import "./App.css";
-import { PearlWidget } from "pearl-react-widget";
+import { PearlWidget } from "@pearl.com/pearl-widget-react";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         <h1>Pearl Chat Widget Example</h1>
       </header>
       <div className="App-widget">
-        <PearlWidget apiKey="your-access-key" mode="pearl-ai"/>
+        <PearlWidget accessKey="your-access-key" mode="pearl-ai"/>
       </div>
     </div>
   );

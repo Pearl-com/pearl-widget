@@ -1,23 +1,38 @@
 {
-  "name": "pearl-vue-widget",
-  "version": "0.0.1",
-  "description": "Vue component for Pearl Widget",
-  "main": "./dist/pearl-vue-widget.umd.js",
-  "module": "./dist/pearl-vue-widget.mjs",
+  "name": "@pearl.com/pearl-widget-vue",
+  "version": "1.0.0",
+  "description": "Vue component wrapper for the Pearl Widget iframe",
+  "author": "Pearl.com",
+  "license": "MIT",
+  "homepage": "https://www.pearl.com/api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pearl-com/pearl-widget.git",
+    "directory": "vue-pearl-widget/pearl-widget"
+  },
+  "bugs": {
+    "url": "https://github.com/Pearl-com/pearl-widget/issues"
+  },
+  "keywords": ["pearl", "widget", "vue", "iframe", "chat"],
+  "main": "./dist/pearl-widget-vue.umd.js",
+  "module": "./dist/pearl-widget-vue.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/pearl-vue-widget.mjs",
-      "require": "./dist/pearl-vue-widget.umd.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/pearl-widget-vue.es.js",
+      "require": "./dist/pearl-widget-vue.cjs.js"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --outDir dist",
-    "dev": "vite"
+    "dev": "vite",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
@@ -30,11 +45,8 @@
     "vue": "^3.3.0",
     "vue-tsc": "^2.0.0"
   },
-  "keywords": [
-    "pearl",
-    "widget",
-    "vue"
-  ],
-  "author": "Pearl AI",
-  "license": "MIT"
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  }
 }
