@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.3.0",
-    "pearl-vue-widget": "0.0.1"
+    "@pearl.com/pearl-widget-vue": "1.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",

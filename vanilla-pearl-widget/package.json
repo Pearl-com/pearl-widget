@@ -1,7 +1,18 @@
 {
-  "name": "pearl-vanilla-widget",
-  "version": "0.0.1",
+  "name": "@pearl.com/pearl-widget",
+  "version": "1.0.0",
   "description": "A lightweight vanilla JS function to embed the Pearl Widget iframe into any webpage or app.",
+  "author": "Pearl.com",
+  "license": "MIT",
+  "homepage": "https://www.pearl.com/api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pearl-com/pearl-widget.git",
+    "directory": "vanilla-pearl-widget"
+  },
+  "bugs": {
+    "url": "https://github.com/Pearl-com/pearl-widget/issues"
+  },
   "main": "dist/pearl-widget.cjs",
   "module": "dist/pearl-widget.js",
   "types": "dist/pearl-widget.d.ts",
@@ -9,12 +20,15 @@
   "jsdelivr": "dist/pearl-widget.iife.js",
   "exports": {
     ".": {
-      "require": "./dist/pearl-widget.cjs",
-      "import": "./dist/pearl-widget.js"
+      "types": "./dist/pearl-widget.d.ts",
+      "import": "./dist/pearl-widget.js",
+      "require": "./dist/pearl-widget.cjs"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsup src/pearl-widget.ts --format esm,cjs,iife --global-name pearlWidget  --dts --minify --out-dir dist",
@@ -29,9 +43,12 @@
     "vanilla-js",
     "embed"
   ],
-  "license": "MIT",
+  "sideEffects": false,
   "devDependencies": {
     "tsup": "^7.2.0",
     "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

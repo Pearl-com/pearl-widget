@@ -1,6 +1,19 @@
 {
-  "name": "ngx-pearl-widget",
-  "version": "0.0.1",
+  "name": "@pearl.com/pearl-widget-angular",
+  "version": "1.0.0",
+  "description": "Angular component wrapper for the Pearl Widget iframe",
+  "author": "Pearl.com",
+  "license": "MIT",
+  "homepage": "https://www.pearl.com/api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pearl-com/pearl-widget.git",
+    "directory": "angular-pearl-widget/projects/pearl-widget"
+  },
+  "bugs": {
+    "url": "https://github.com/Pearl-com/pearl-widget/issues"
+  },
+  "keywords": ["pearl", "widget", "angular", "iframe", "chat"],
   "peerDependencies": {
     "@angular/common": "^20.0.0",
     "@angular/core": "^20.0.0"
@@ -8,5 +21,22 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./fesm2022/pearl.com-pearl-widget-angular.mjs",
+      "default": "./fesm2022/pearl.com-pearl-widget-angular.mjs"
+    }
+  },
+  "module": "fesm2022/pearl.com-pearl-widget-angular.mjs",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

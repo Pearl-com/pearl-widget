@@ -1,6 +1,6 @@
 # Pearl Vue Widget - Sample App
 
-Sample application demonstrating usage of `pearl-vue-widget`.
+Sample application demonstrating usage of `@pearl.com/pearl-widget-vue`.
 
 ## Project Setup
 

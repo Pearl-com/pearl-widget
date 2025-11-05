@@ -12,7 +12,7 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "paths": {
-      "pearl-widget": [
+      "@pearl.com/pearl-widget-angular": [
         "./dist/pearl-widget"
       ]
     },

@@ -1,4 +1,4 @@
-# vanilla-pearl-widget
+# @pearl.com/pearl-widget
 
 Vanilla JavaScript library to embed the **Pearl Widget** iframe in your web application. Initialize the widget with an access key and mode for interactive chat or expert systems powered by Pearl.
 
@@ -9,24 +9,24 @@ Vanilla JavaScript library to embed the **Pearl Widget** iframe in your web appl
 - Initializes via `postMessage` on iframe load
 - Simple integration into any HTML page
 
-By default chat starts in pearl-ai mode. To enable other mods you need to obtain `apiKey` [here](https://www.pearl.com/contact).
+By default chat starts in pearl-ai mode. To enable other mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
 
 ## 📦 Installation
 
 Include `pearl-widget.global.js` in your HTML, or install via npm:
 
 ```bash
-npm install pearl-vanilla-widget
+npm install @pearl.com/pearl-widget
 ```
 
 ### Import
 
 ```js
 // ES Module
-import { insertPearlWidget } from 'pearl-vanilla-widget';
+import { insertPearlWidget } from '@pearl.com/pearl-widget';
 
 // CommonJS
-const { insertPearlWidget } = require('pearl-vanilla-widget');
+const { insertPearlWidget } = require('@pearl.com/pearl-widget');
 ```
 
 ## 🚀 Usage

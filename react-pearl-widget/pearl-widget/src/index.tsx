@@ -1,1 +1,2 @@
-export { PearlWidget, PearlWidgetProps } from "./PearlWidget";
+export { PearlWidget } from "./PearlWidget";
+export type { PearlWidgetProps } from "./PearlWidget";

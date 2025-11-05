@@ -1,23 +1,53 @@
 {
-  "name": "pearl-react-widget",
-  "version": "0.0.1",
-  "description": "Represents simple react ready to use Pearl API widget",
+  "name": "@pearl.com/pearl-widget-react",
+  "version": "1.0.0",
+  "description": "React component wrapper for the Pearl Widget iframe",
+  "author": "Pearl.com",
+  "license": "MIT",
+  "homepage": "https://www.pearl.com/api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pearl-com/pearl-widget.git",
+    "directory": "react-pearl-widget/pearl-widget"
+  },
+  "bugs": {
+    "url": "https://github.com/Pearl-com/pearl-widget/issues"
+  },
+  "keywords": ["pearl", "widget", "react", "iframe", "chat"],
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
+  "sideEffects": false,
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts"
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react,react-dom",
+    "prepare": "npm run build"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": false },
+    "react-dom": { "optional": false }
   },
   "devDependencies": {
     "@types/react": "18.3.4",
     "@types/react-dom": "18.3.0",
     "tsup": "^8.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
