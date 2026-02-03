@@ -9,7 +9,7 @@ Vue component to embed the **Pearl Widget** iframe in your web application. Init
 - Initializes via `postMessage` on iframe load
 - Simple Vue integration
 
-By default chat starts in pearl-ai mode. To enable other mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
+To enable all mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
 
 
 ## 📦 Installation
@@ -34,14 +34,14 @@ import { PearlWidget } from '@pearl.com/pearl-widget-vue';
 import { ref } from 'vue';
 
 const yourAccessKey = ref('your-actual-access-key');
-const yourMode = ref('pearl-ai'); // e.g., 'expert', 'pearl-ai', 'pearl-ai-verified'
+const yourMode = ref('pearl-ai-expert'); // e.g., 'expert', 'pearl-ai-expert', 'pearl-ai-verified'
 </script>
 ```
 
 ## 🛠️ Props
 
 - `accessKey` (String, optional): Your Pearl access key.
-- `mode` (String, optional): Widget mode (e.g., `expert`, `pearl-ai`). Required if `accessKey` is provided.
+- `mode` (String, optional): Widget mode (e.g., `expert`, `pearl-ai-expert`, 'pearl-ai-verified'). Required if `accessKey` is provided.
 
 ## 🧑‍💻 Development
 

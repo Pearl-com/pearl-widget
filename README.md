@@ -2,12 +2,11 @@
 
 Pearl API empowers your applications and websites with advanced AI capabilities—plus a unique layer of accuracy and trust by connecting users directly with a global network of over 12,000 real human experts across hundreds of categories. With Pearl, you can:
 
-- Instantly embed conversational AI that answers questions in real time.
-- Seamlessly escalate complex or sensitive queries to credentialed professionals in law, medicine, finance, technology, education, and more.
+- Seamlessly ask complex or sensitive questions to credentialed professionals in law, medicine, finance, technology, education, and more.
 - Offer users a blended experience: AI for speed and scale, human experts for accuracy, nuance, and peace of mind.
 - Leverage secure, scalable infrastructure and easy integration for any web platform.
 
-Pearl's hybrid approach ensures your users always get the best answer - whether from state-of-the-art AI or a verified human expert.
+Pearl's hybrid approach ensures your users always get the best answer verified by human expert.
 
 ![See Pearl Widget in Action](./assets/see_it_in_action.png)
 
@@ -42,20 +41,7 @@ The system seamlessly routes conversations between AI and human experts based on
 
 ## Quick Embed: Add Pearl AI to Any Website
 
-### Basic Embed (AI-only mode)
-
-You can add Pearl AI to your website by simply copying and pasting the following HTML snippet:
-
-```html
-<iframe
-  src="https://www.pearl.com/api/widget"
-  title="Pearl Widget"
-  style="width:100%; height:600px; border:none;"
-  allow="clipboard-write"
-></iframe>
-```
-
-### Advanced Embed (AI + Expert mode with Access Key)
+### Basic Embed (AI + Expert mode with Access Key)
 
 For full AI + Expert functionality, add this single script tag anywhere in your HTML:
 
@@ -64,7 +50,7 @@ For full AI + Expert functionality, add this single script tag anywhere in your 
 (function() {
     // Configuration - Replace with your actual values
     const PEARL_ACCESS_KEY = 'YOUR_ACCESS_KEY';
-    const PEARL_MODE = 'pearl-ai-expert'; // Options: 'expert', 'pearl-ai', 'pearl-ai-verified', 'pearl-ai-expert'
+    const PEARL_MODE = 'pearl-ai-expert'; // Options: 'expert', 'pearl-ai-verified', 'pearl-ai-expert'
     const CONTAINER_ID = 'pearl-widget-container'; // ID of the div where widget should appear
     
     // Create container if it doesn't exist
@@ -133,7 +119,6 @@ For full AI + Expert functionality, add this single script tag anywhere in your 
 
 **Available modes:**
 - `expert`: Direct human expert assistance
-- `pearl-ai`: AI-only responses  
 - `pearl-ai-verified`: AI responses verified by experts
 - `pearl-ai-expert`: Full AI + Expert escalation capability
 

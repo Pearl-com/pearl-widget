@@ -9,7 +9,7 @@ Vanilla JavaScript library to embed the **Pearl Widget** iframe in your web appl
 - Initializes via `postMessage` on iframe load
 - Simple integration into any HTML page
 
-By default chat starts in pearl-ai mode. To enable other mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
+To enable all mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
 
 ## 📦 Installation
 
@@ -43,7 +43,7 @@ Then insert the widget:
 document.addEventListener('DOMContentLoaded', function() {
   insertPearlWidget('#pearl-widget-container', {
     accessKey: 'your-access-key', // Optional
-    mode: 'pearl-ai'              // Optional
+    mode: 'pearl-ai-expert'       // Optional
   });
 });
 ```
@@ -55,7 +55,7 @@ The `insertPearlWidget` function accepts a configuration object with the followi
 | Property    | Type     | Description                                                                                         |
 | ----------- | -------- | --------------------------------------------------------------------------------------------------- |
 | `accessKey` | `string` | Optional. The key used to authenticate the widget session.                                      |
-| `mode`      | `string` | Optional. Used only with **accessKey**. One of the available modes: `expert`, `pearl-ai`, `pearl-ai-verified`, `pearl-ai-expert`. |
+| `mode`      | `string` | Optional. Used only with **accessKey**. One of the available modes: `expert`, `pearl-ai-verified`, `pearl-ai-expert`. |
 
 ## 🧪 Development
 

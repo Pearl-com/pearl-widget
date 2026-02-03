@@ -8,7 +8,7 @@ React component for embedding the **Pearl Widget** iframe in your application. E
 - Initializes via `postMessage` on iframe load
 - Simple React integration
 
-By default chat starts in pearl-ai mode. To enable other mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
+To enable all mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
 
 ## 📦 Installation
 ```bash
@@ -19,14 +19,14 @@ npm install @pearl.com/pearl-widget-react
 ```jsx
 import { PearlWidget } from '@pearl.com/pearl-widget-react';
 
-<PearlWidget accessKey="your-access-key" mode="pearl-ai" />
+<PearlWidget accessKey="your-access-key" mode="pearl-ai-expert" />
 ```
 
 ## 🛠️ Props
 | Prop     | Type     | Description                                                                 |
 |----------|----------|-----------------------------------------------------------------------------|
 | accessKey   | string   | Optional. Key to authenticate the widget session.                            |
-| mode     | string   | Optional. Widget mode: `expert`, `pearl-ai`, `pearl-ai-verified`, `pearl-ai-expert` |
+| mode     | string   | Optional. Widget mode: `expert`, `pearl-ai-verified`, `pearl-ai-expert` |
 
 ## 🧑‍💻 Development
 To build locally:
