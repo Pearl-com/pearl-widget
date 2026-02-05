@@ -9,7 +9,7 @@ An Angular component that embeds the **Pearl Widget** iframe into your applicati
 - Automatically initializes via `postMessage` on iframe load
 - Simple Angular integration
 
-By default chat starts in pearl-ai mode. To enable other mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
+To enable all mods you need to obtain `accessKey` [here](https://www.pearl.com/contact).
 
 ## 📦 Installation
 
@@ -24,7 +24,7 @@ npm install @pearl.com/pearl-widget-angular
 ```html
 <pearl-widget
   [accessKey]="'your-access-key'"
-  [mode]="'pearl-ai'"
+  [mode]="'pearl-ai-expert'"
 ></pearl-widget>
 ```
 
@@ -33,7 +33,7 @@ npm install @pearl.com/pearl-widget-angular
 | Input       | Type     | Description                                                                                         |
 | ----------- | -------- | --------------------------------------------------------------------------------------------------- |
 | `accessKey` | `string` | Optional. The key used to authenticate the widget session.                                      |
-| `mode`      | `string` | Optional. Used only with **accessKey**. One of the available modes: `expert`, `pearl-ai`, `pearl-ai-verified`, `pearl-ai-expert`. |
+| `mode`      | `string` | Optional. Used only with **accessKey**. One of the available modes: `expert`, `pearl-ai-verified`, `pearl-ai-expert`. |
 
 ## 🧪 Development
 
